@@ -1,7 +1,10 @@
 {
-  "name": "HelloIonic",
+  "name": "iv-mobile",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.1.0"
+    "ionic": "driftyco/ionic-bower#1.0.0",
+    "ngCordova" : "*"
+  },
+  "dependencies": {
   }
 }

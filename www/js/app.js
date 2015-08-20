@@ -5,10 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', [
   'ionic',
-  'ngResource',
-  'ngCordova',
-  'ngCordovaOauth',
-  'iv.utils'
+  'ngCordova'
 ])
 
   .run(function ($rootScope, $state, $ionicPlatform) {
@@ -34,7 +31,7 @@ angular.module('starter', [
         url: '/welcome',
         views: {
           'menuContent': {
-            templateUrl: 'app/templates/welcome.html',
+            templateUrl: 'templates/welcome.html',
             controller: function ($scope, Drive) {
               $scope.loginByGoogle = function(){
 
@@ -60,7 +57,7 @@ angular.module('starter', [
         url: '/drive',
         views: {
           'menuContent': {
-            templateUrl: 'app/templates/drive.html',
+            templateUrl: 'templates/drive.html',
             controller: function ($scope, Drive) {
               $scope.files = [];
 

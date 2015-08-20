@@ -21,8 +21,7 @@
   visibility: hidden;
   opacity: 0;
 
-  &:not(.visible) .icon,
-  &:not(.visible) .spinner{
+  &:not(.visible) .icon {
     display: none;
   }
   &.visible {
