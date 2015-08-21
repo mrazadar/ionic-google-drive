@@ -50,13 +50,20 @@ Move back to 1st Tab 'Credentials' on top and click 'Add credentials' button to 
     If you're implementing a purely Javascript based application where you don't have a backend. you can put any valid URL 
     like 'http:localhost/callback/', this redirect-uri must match with the redirect-uri of your call. 
      
-     
- Click 'Create' button and you're finish. :)
+
+ Click 'Create' button and you'll have 'client_id for your app. :)
+
+ Finally, you just need to enable google-drive api for your app;
+    Goto: APIs & auth -> APIs
+    and in search type 'drive', Now hit the 'Drive API' option.
+    press the 'Enable API' button on top and you're done.
+
+    There you go :)
 
 
 Step-4: (Authorize with Google and access google-drive-files)
 
- You just need to call the 'authenticate' method of 'Drive' factory. (This will open goolge-authentication form inside in-app browser plugin)
+ You just need to call the 'authenticate' method of 'Drive' factory inside drive.js. (This will open goolge-authentication form inside in-app browser plugin)
  
     this.authenticateViaGoogle = function (user) {
        var defer = $q.defer();
@@ -84,11 +91,13 @@ Step-4: (Authorize with Google and access google-drive-files)
    
     Note: how we're passing exactly same 'redirect-uri' in the authorize call. 
  
- once your receive response-token-object. You can use access_token for your authorization scheme. 
+ once you receive response-token-object. You can use access_token for your authorization scheme.
  
- Lastly, you just need to set this token in 'gapi' library, to accommodate any further calls using gapi library 
+ Lastly, you just need to set this response/token in 'gapi' javascript client library, to accommodate any further calls using gapi library
 
  like this : gapi.auth.setToken(response);
+
+ You can see in drive.js how we're loading 'google-drive' client to use with the 'gapi' javascript client library.
  
  There you go!! 
  

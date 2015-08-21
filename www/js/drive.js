@@ -16,9 +16,7 @@
 
 angular.module('starter')
     .constant('apiKey', null)
-    /*.constant('clientId', '553643260895-aoslr91jsj1sc7mpsb4v0ba7eudohi5q.apps.googleusercontent.com')*/
-    .constant('applicationId', 'AIzaSyB8R8dsQwJSrFTO2kPfKGStEenvPL3dSxo')
-    /*.constant('scope', ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/userinfo.email'])*/
+    .constant('applicationId', '')
     .constant('loadApis', {'drive': 'v2'})
 /**
  * Adapter for exposing gapi as an angular service. This registers a promise that will
@@ -111,7 +109,6 @@ angular.module('starter')
                   }
                 }
                 var url = 'https://accounts.google.com/o/oauth2/auth?client_id=' + clientId + '&redirect_uri=' + redirect_uri + '&scope=' + appScope.join(" ") + '&approval_prompt=force&response_type=token';
-                console.log(url);
                 var browserRef = window.open(url, '_blank', 'location=no,clearsessioncache=yes,clearcache=yes');
                 browserRef.addEventListener("loadstart", function (event) {
                   if ((event.url).indexOf(redirect_uri) === 0) {

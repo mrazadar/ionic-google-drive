@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
+<ion-view view-title="Drive">
 
-</body>
-</html>
+  <ion-content class="has-header">
+
+
+    <ion-list>
+      <div class="item item-positive item-icon-left item-icon-right" class="item" href="javascript:void(0)">
+        <a  class="icon ion-ios-arrow-back" ui-sref="welcome"></a>
+        Google Drive
+      </div>
+
+      <div ng-repeat="file in files">
+        <ion-item class="item item-icon-right" >
+          {{file.name}}
+        </ion-item>
+      </div>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>
