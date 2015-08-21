@@ -71,7 +71,7 @@ Step-4: (Authorize with Google and access google-drive-files)
  
     this.authenticateViaGoogle = function (user) {
        var defer = $q.defer();
-       var client_id = "553643260895-aoslr91jsj1sc7mpsb4v0ba7eudohi5q.apps.googleusercontent.com";//web-app
+       var client_id = "452884761284-bark5bkplgau1vcj8re88ok6r2vg3l48.apps.googleusercontent.com";//web-app
        var scopes = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/userinfo.email'];
   
        Drive.authenticate(client_id, scopes, {redirect_uri: 'http://localhost/callback/'})
