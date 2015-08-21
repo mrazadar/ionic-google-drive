@@ -57,7 +57,7 @@ angular.module('starter', [
         var client_id = "452884761284-bark5bkplgau1vcj8re88ok6r2vg3l48.apps.googleusercontent.com";//web-app
         var scopes = ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/drive.file', 'https://www.googleapis.com/auth/userinfo.email'];
         Drive.authenticate(client_id, scopes, {redirect_uri: 'http://localhost/callback/'})
-            .then(function (response) {
+            .then(function (response) {//authenticate
               if (response) {
                 var token = response.access_token;
                 gapi.auth.setToken(response);

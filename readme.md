@@ -60,8 +60,10 @@ Move back to 1st Tab 'Credentials' on top and click 'Add credentials' button to 
 
     There you go :)
 
+-------------
 
 Step-4: (Authorize with Google and access google-drive-files)
+==============
 
  You just need to call the 'authenticate' method of 'Drive' factory inside drive.js. (This will open goolge-authentication form inside in-app browser plugin)
  
