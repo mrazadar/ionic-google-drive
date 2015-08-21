@@ -9,7 +9,7 @@ After you have cloned this repo, run the ionic installer to set up your machine
 with the necessary dependencies to run and test this app:
 
      ```bash
-     $ cd google-drive
+     $ cd ionic-google-drive
      $ sudo npm install -g cordova ionic gulp
      $ npm install
      $ gulp install
