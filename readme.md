@@ -47,7 +47,7 @@ Move back to 1st Tab 'Credentials' on top and click 'Add credentials' button to 
     like 'http:localhost/callback/', this redirect-uri must match with the redirect-uri of your call. 
      
 
- Click 'Create' button and you'll have 'client_id for your app. :)
+ Click 'Create' button and you'll have 'client_id' for your app. :)  Update the existing 'client_id' in www/js/app.js with this new 'client_id' that is issued for your app.
 
  Finally, you just need to enable google-drive api for your app;
     Goto: APIs & auth -> APIs
