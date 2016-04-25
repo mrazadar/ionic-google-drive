@@ -21,13 +21,7 @@ with the necessary dependencies to run and test this app:
 ------------------
 Step-2: (Configure Plugins)
 =======
-Then, make sure you have following plugins installed
-
-
-com.ionic.keyboard 1.0.4 "Keyboard"
-cordova-plugin-inappbrowser 1.0.1-dev "InAppBrowser"
-
-------------------
+[no longer needed]
 
 
 Step-3: (Set up google-application on https://console.developers.google.com)
