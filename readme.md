@@ -21,13 +21,7 @@ with the necessary dependencies to run and test this app:
 ------------------
 Step-2: (Configure Plugins)
 =======
-Then, make sure you have following plugins installed
-
-
-com.ionic.keyboard 1.0.4 "Keyboard"
-cordova-plugin-inappbrowser 1.0.1-dev "InAppBrowser"
-
-------------------
+[no longer needed]
 
 
 Step-3: (Set up google-application on https://console.developers.google.com)
@@ -53,7 +47,7 @@ Move back to 1st Tab 'Credentials' on top and click 'Add credentials' button to 
     like 'http:localhost/callback/', this redirect-uri must match with the redirect-uri of your call. 
      
 
- Click 'Create' button and you'll have 'client_id for your app. :)
+ Click 'Create' button and you'll have 'client_id' for your app. :)  Update the existing 'client_id' in www/js/app.js with this new 'client_id' that is issued for your app.
 
  Finally, you just need to enable google-drive api for your app;
     Goto: APIs & auth -> APIs
@@ -64,10 +58,22 @@ Move back to 1st Tab 'Credentials' on top and click 'Add credentials' button to 
 
 -------------
 
-Step-4: (Authorize with Google and access google-drive-files)
+Step-4: Try it
+==============
+Depending on your platform, device or emulator try the base code.
+
+'ionic [run|emulate] [andoid|ios]'
+
+i.e. 'ionic run andorid' if you have an android device properly connected.  
+
+Note that by design, OAuth in ionic does not support running in the borwser since the callback url is for mobile.  In other words you can not use 'ionic serve' when trying OAuth.  See https://github.com/nraboy/ng-cordova-oauth/issues/46 regarding this.
+
+-------------
+
+How does it work? how do I extend it?
 ==============
 
- You just need to call the 'authenticate' method of 'Drive' factory inside drive.js. (This will open goolge-authentication form inside in-app browser plugin)
+ You are basically calling the 'authenticate' method of 'Drive' factory inside drive.js. (This will open goolge-authentication form inside in-app browser plugin)
  
     this.authenticateViaGoogle = function (user) {
        var defer = $q.defer();
