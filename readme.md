@@ -1,4 +1,4 @@
-Ionic-google-drive mobile Application
+Ionic-google-drive mobile Application -- (no longer mainainting)
 =========
 Getting Started
 ---------------
